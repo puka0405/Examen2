@@ -1,0 +1,39 @@
+{
+  "canisters": {
+    "Examen_backend": {
+      "build": "npx azle Examen_backend",
+      "candid": "src/Examen_backend/Examen_backend.did",
+      "gzip": true,
+      "main": "src/Examen_backend/src/index.ts",
+      "tech_stack": {
+        "cdk": {
+          "azle": {}
+        },
+        "language": {
+          "javascript": {},
+          "typescript": {}
+        }
+      },
+      "type": "custom",
+      "wasm": ".azle/Examen_backend/Examen_backend.wasm"
+    },
+    "Examen_frontend": {
+      "dependencies": [
+        "Examen_backend"
+      ],
+      "source": [
+        "src/Examen_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "Examen_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
